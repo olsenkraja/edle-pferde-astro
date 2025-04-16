@@ -12,6 +12,17 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
+        cover_image: fields.image({
+          label: 'Cover image',
+          directory: 'src/assets/cover_images/posts',
+          publicPath: '@assets/cover_images/posts/'
+
+          // directory: 'public/images/posts/cover_images',
+          // publicPath: '/images/posts/cover_images/',
+          // validation: {
+          //   isRequired: true,
+          // },
+        }),
         content: fields.markdoc({
           label: 'Content',
           options: {

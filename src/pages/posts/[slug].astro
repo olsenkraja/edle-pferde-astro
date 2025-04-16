@@ -2,6 +2,7 @@
 import {getCollection, getEntry} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Prose from "../../components/Prose.astro";
+import Image from 'astro/components/Image.astro';
 
 const {slug} = Astro.params;
 if (!slug) throw new Error('Slug not found');
@@ -18,7 +19,12 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={post.data.title}>
-    <h1>{post.data.title}</h1>
+    <Image
+            src={`/src/assets/cover_images/posts/${post.slug}/cover_image.jpg`}
+            alt=""
+            width="1024"
+            height="1"
+    />
     <Prose>
         <Content/>
     </Prose>
