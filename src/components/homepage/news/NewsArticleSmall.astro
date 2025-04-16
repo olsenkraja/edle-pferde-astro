@@ -3,7 +3,7 @@ const { post } = Astro.props;
 
 ---
 <a href={`/posts/${post.slug}`} class="w-full aspect-square bg-[#9747FF] relative">
-    <div class="absolute bottom-4 inset-x-4 line-clamp-2 text-white z-10">
+    <div class="absolute bottom-4 inset-x-4 line-clamp-2 text-white z-10 font-semibold">
       {post.data.title}
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from from-black via-transparent"/>
