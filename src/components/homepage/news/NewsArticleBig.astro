@@ -1,0 +1,11 @@
+---
+const {post} = Astro.props;
+---
+<a href={`/posts/${post.slug}`} class="flex flex-col items-start gap-8 px-8 py-0 relative self-stretch w-full flex-[0_0_auto] z-[1]">
+    <article class="w-full aspect-video bg-[#9747FF] relative">
+        <h1 class="absolute bottom-8 inset-x-8 line-clamp-2 text-white z-10 text-3xl font-semibold">
+          {post.data.title}
+        </h1>
+        <div class="absolute inset-0 bg-gradient-to-t from from-black via-transparent"/>
+    </article>
+</a>
