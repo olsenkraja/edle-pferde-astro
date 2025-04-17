@@ -14,8 +14,8 @@ export default config({
         title: fields.slug({ name: { label: 'Title' } }),
         cover_image: fields.image({
           label: 'Cover image',
-          directory: 'src/assets/cover_images/posts',
-          publicPath: '@assets/cover_images/posts/'
+          directory: 'public/cover_images/posts',
+          publicPath: '/public/cover_images/posts/'
 
           // directory: 'public/images/posts/cover_images',
           // publicPath: '/images/posts/cover_images/',
@@ -27,7 +27,7 @@ export default config({
           label: 'Content',
           options: {
             image: {
-              directory: 'src/assets/images/posts',
+              directory: 'public/images/posts',
               publicPath: '../../assets/images/posts/',
             },
           },
