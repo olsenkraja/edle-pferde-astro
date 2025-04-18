@@ -4,96 +4,35 @@ import NewsArticleSmall from "./homepage/news/NewsArticleSmall.astro";
 
 const {posts} = Astro.props
 ---
-<div class="flex flex-col items-center justify-center gap-2.5 relative self-stretch w-full flex-[0_0_auto]">
-    <div class="flex flex-col w-[1024px] items-center justify-center gap-8 relative flex-[0_0_auto]">
-        <div class="inline-flex flex-col items-center justify-center gap-4 relative flex-[0_0_auto]">
-            <div
-                    class="relative w-fit mt-[-1.00px] [font-family:'Marcellus_SC-Regular',Helvetica] font-normal text-[#04482c] text-[32px] text-center tracking-[0] leading-[27.8px] whitespace-nowrap">
-                News
+<div class="max-w-5xl mx-auto">
+    <div class="flex flex-col items-center justify-center gap-8">
+        <div class="flex flex-col space-y-8">
+            <div class="space-y-2">
+                <div class="font-normal text-[#04482c] text-3xl text-center">
+                    News
+                </div>
+                <div class="font-bold text-[#04482c] text-sm tracking-widest text-center uppercase">
+                    Neues aus Pichl
+                </div>
             </div>
 
-            <div
-                    class="relative w-fit [font-family:'Montserrat-Bold',Helvetica] font-bold text-[#04482c] text-sm tracking-[7.28px] leading-[14.9px] whitespace-nowrap">
-                NEUES AUS PICHL
-            </div>
 
-          {/*<img*/}
-          {/*  class="relative w-[95.89px] h-0.5 mb-[-2.00px]"*/}
-          {/*  alt="Line"*/}
-          {/*  src={line1}*/}
-          {/*/>*/}
-        </div>
-
-        <div class="flex flex-col items-center relative self-stretch w-full flex-[0_0_auto]">
             <NewsArticleBig post={posts[0]}/>
-
-            <div
-                    class="flex flex-col items-center justify-center gap-8 pt-96 pb-8 px-8 relative self-stretch w-full flex-[0_0_auto] -mt-80 z-0 bg-white rounded-2xl shadow-[0px_7px_15px_#0000001a,0px_27px_27px_#00000017,0px_60px_36px_#0000000d,0px_108px_43px_#00000003,0px_168px_47px_transparent]">
-                <div class="flex items-start gap-8 relative self-stretch w-full flex-[0_0_auto]">
+            <div class="pt-80 px-8 -mt-80 bg-white rounded-2xl shadow-2xl">
+                <div class="flex gap-8">
                   {posts.slice(1, 5).map(post => (
                           <NewsArticleSmall post={post}/>
                   ))}
-
-                  {/*<div*/}
-                  {/*  class="flex flex-col h-[216px] items-center justify-end px-0 py-4 relative flex-1 grow rounded-[15px] bg-cover bg-[50%_50%]">*/}
-                  {/*  <div*/}
-                  {/*    class="absolute w-[216px] h-[141px] top-[75px] left-0 rounded-[15px] [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"/>*/}
-
-                  {/*  <div*/}
-                  {/*    class="relative w-[188.93px] [font-family:'Montserrat-Bold',Helvetica] font-bold text-white text-base tracking-[0] leading-5 overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">*/}
-                  {/*    LM-Sieg und Meisterschaftstitel für...*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
-
-                  {/*<div class="relative flex-1 grow h-[216px]">*/}
-                  {/*  <div class="bg-cover bg-[50%_50%] relative w-[216px] h-[216px]">*/}
-                  {/*    <div*/}
-                  {/*      class="absolute w-[216px] h-[141px] top-[75px] left-0 rounded-[15px] [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"/>*/}
-
-                  {/*    <div*/}
-                  {/*      class="absolute w-[130px] top-[173px] left-[21px] [font-family:'Montserrat-Bold',Helvetica] font-bold text-white text-base tracking-[0] leading-5">*/}
-                  {/*      Endlich Weidezeit*/}
-                  {/*    </div>*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
-
-                  {/*<div class="relative flex-1 grow h-[216px]">*/}
-                  {/*  <div class="bg-cover bg-[50%_50%] relative w-[216px] h-[216px]">*/}
-                  {/*    <div*/}
-                  {/*      class="absolute w-[216px] h-[141px] top-[75px] left-0 rounded-[15px] [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"/>*/}
-
-                  {/*    <div*/}
-                  {/*      class="absolute w-[155px] top-[173px] left-[25px] [font-family:'Montserrat-Bold',Helvetica] font-bold text-white text-base tracking-[0] leading-5">*/}
-                  {/*      Weiße Pracht in Pichl*/}
-                  {/*    </div>*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
-
-                  {/*<div class="relative flex-1 grow h-[216px] mr-[-2.00px]">*/}
-                  {/*  <div class="bg-[100%_100%] relative w-[216px] h-[216px]">*/}
-                  {/*    <div*/}
-                  {/*      class="absolute w-[216px] h-[141px] top-[75px] left-0 rounded-[15px] [background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"/>*/}
-
-                  {/*    <p*/}
-                  {/*      class="absolute w-[170px] top-[156px] left-[21px] [font-family:'Montserrat-Bold',Helvetica] font-bold text-white text-base tracking-[0] leading-5">*/}
-                  {/*      Ein herbstlicher Morgen auf der Koppel*/}
-                  {/*    </p>*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
                 </div>
-
-                <div
-                        class="flex flex-col w-[155px] h-[37px] gap-[15px] px-[23px] py-[15px] rounded-[100px] items-center justify-center relative">
-                    <div
-                            class="mt-[-13.86px] [font-family:'Montserrat-Bold',Helvetica] font-bold text-[#04482c] text-[10px] tracking-[2.30px] leading-[10.7px] relative w-fit whitespace-nowrap">
-                        MEHR LESEN
-                    </div>
-
-                  {/*<img*/}
-                  {/*  class="relative w-[11.19px] h-[6.71px] mb-[-12.86px]"*/}
-                  {/*  alt="Vector"*/}
-                  {/*  src={vector}*/}
-                  {/*/>*/}
+                <div class="flex justify-center py-8">
+                    <a href="#" class="flex flex-col items-center">
+                        <span class="tracking-widest uppercase text-sm">Mehr lesen</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-chevron-down-icon lucide-chevron-down">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </>
                 </div>
             </div>
         </div>
